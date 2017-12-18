@@ -89,16 +89,16 @@ def main():
 #          """ Brief description of what objects of the class 'are'. """
 #
 ########################################################################
-class Baby():
+class Baby(object):
     def __init__(self, baby_name):
-        baby_name = baby_name
+        self.baby_name = baby_name
         print("Hello baby", baby_name, "!")
 
     def hour_passes(self):
-        print('Baby', self, 'is sleeping.')
+        print('Baby', self.baby_name, 'is sleeping.')
 
-    def feed_boby(self):
-        print("Thank you for feeding baby", self, ".")
+    def feed_baby(self):
+        print("Thank you for feeding baby", self.baby_name, ".")
 
 
 
