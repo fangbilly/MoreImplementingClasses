@@ -14,7 +14,7 @@ def main():
     #   Uncomment only 1 test at a time as you develop your code.
     # --------------------------------------------------------------
 
-    # run_test_simple_t()
+    run_test_simple_t()
     # run_test_set_colors()
     # run_test_move_by()
     # run_test_clone()
@@ -140,10 +140,13 @@ class CapitalT(object):
         #   Implement this method
         #   Note: you will need to also implement attach_to before testing
         # --------------------------------------------------------------
-        h_rect = rg.Rectangle(rg.Point(intersection_center.x - width/2, intersection_center.y - letter_thickness/2),
-                              rg.Point(intersection_center.x + width/2, intersection_center.y + letter_thickness/2))
-        v_rect = rg.Rectangle(rg.Point(intersection_center.x - letter_thickness/2, intersection_center.y - letter_thickness/2),
-                              rg.Point(intersection_center.x + letter_thickness/2, intersection_center.y + height - letter_thickness/2))
+        self.h_rect = rg.Rectangle(rg.Point(intersection_center.x - width/2, intersection_center.y - letter_thickness/2)
+                                   , rg.Point(intersection_center.x + width/2,
+                                              intersection_center.y + letter_thickness/2))
+        self.v_rect = rg.Rectangle(rg.Point(intersection_center.x - letter_thickness/2,
+                                            intersection_center.y - letter_thickness/2),
+                                   rg.Point(intersection_center.x + letter_thickness/2,
+                                            intersection_center.y + height - letter_thickness/2))
 
     def attach_to(self, window):
         """
@@ -169,7 +172,8 @@ class CapitalT(object):
         #   Implement and test this method by looking at the console and
         #     the graphics window (compare it to simple_t.pdf)
         # --------------------------------------------------------------
-
+        window1 = window.initial_canvas
+        window1
 
     def set_colors(self, fill_color, outline_color):
         """
